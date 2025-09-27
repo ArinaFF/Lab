@@ -1,17 +1,26 @@
-﻿#include <iostream>
-#include <cmath> // подключаем для того чтобы выполнить возведение в степень или взять под корень ( в моем случае берем выражение под корень)
+#include <iostream>
+#include <cmath> // подключаем для того чтобы взять под корень
 int main()
 {
-	int x = 3; //задаем стороны треугольнику. тип данных - целочисленный, тк считать будет легче
-	int y = 4;
-	int z = 5;
+	
+	int x,y,z; //стороны треугольника. тип данных - целочисленный, тк считать будет легче
+	std::cout << " Enter x: ";  //просим пользователя ввести числа
+	std::cin >> x;
+	std::cout << " Enter y: ";
+	std::cin >> y;
+	std::cout << " Enter z: ";
+	std::cin >> z;
+	
 
-	int p = (x + y + z) / 2; // находим полупериметр, который мы подставим в формулу
-	int s = sqrtl(p * (p - x) * (p - y) * (p - z)); // площадь Герона 
+	float p = (x + y + z) / 2.0f; // находим полупериметр, который мы подставим в формулу
+	float s = sqrt(p * (p - x) * (p - y) * (p - z)); // площадь Герона   
 
-	std::cout << "x = "<< x << " int, 2 bit"; //выводим название переменной, ее значение и размер в битах
-	std::cout << ", y = " << y << " int, 3 bit";
-	std::cout << ", z = " << z << " int, 3 bit";
-	std::cout << ", s = " << s << "  int" ; // вывела тип дынных так, тк если писать на русском то с++ выдает какие то прикольчики
+	std::cout << "x = "<< x << ", size = " << sizeof(x) * 8  << std::endl;          // название переменной, ее значение и размер  
+	std::cout << "y = " << y << ", size = " << sizeof(y) * 8  << std::endl;
+	std::cout << "z = " << z << ", size = "<< sizeof(z) * 8  << std::endl;
+	std::cout << "s = " << s << ", size = " << sizeof(s) * 8  << std::endl;
+	std::cout << "Max float value: " << std::numeric_limits<float>::max() << std::endl; // макс значение 
+	std::cout << "Min float value: " << std::numeric_limits<float>::min() << std::endl;// мин значение
+		
 
-}
+}          
