@@ -1,6 +1,6 @@
 #include <iostream>
 #include <bitset>
-//пункт 1. возможны ошибки
+//пункт 1. 
 int main()
 {
 	setlocale(LC_ALL, "Russian");// для перевода на русский язык
@@ -22,7 +22,7 @@ int main()
 	}
 
 
-	short value_i = A & (1 << i); //сдвиг влево на значение i бит
+	short value_i = (A & (1 << i)) < 2; //сдвиг влево на значение i бит
 	if (value_i == 0) {
 		A = A * A;
 		A = A & ~(1 << i); 
@@ -46,6 +46,7 @@ int main()
 		std::cout << "  Калининград - Чапаево";
 		break;
 	case 114:
+	case 141:
 		std::cout << "Калининград - Зеленоградск";
 		break;
 	case 117:
@@ -63,17 +64,12 @@ int main()
 	case 136:
 		std::cout << "Калининград - Партизанское";
 		break;
-	case 141:
-		std::cout << "Калининград - Зеленоградск";
-		break;
 	case 148:
+	case 191:
 		std::cout << "Калининград - Багратионовск";
 		break;
 	case 161:
 		std::cout << "Калининград - Светлое";
-		break;
-	case 191:
-		std::cout << "Калининград - Багратионовск";
 		break;
 	case 593:
 		std::cout << "Калининград - Морское";
@@ -88,5 +84,6 @@ int main()
 
 
 	}
+
 
 
