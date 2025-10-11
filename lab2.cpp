@@ -25,7 +25,7 @@ int main()
 	short value_i = A & (1 << i); //сдвиг влево на значение i бит
 	if (value_i == 0) {
 		A = A * A;
-		A = A & ~(1 << i); // установка i бит результата в 0
+		A = A & ~(1 << i); 
 		std::cout << "A = " << std::bitset<8>(a) << std::endl; //до
 		std::cout << "A = " << std::bitset<8>(A) << std::endl; // после
 	}
@@ -88,4 +88,5 @@ int main()
 
 
 	}
+
 
