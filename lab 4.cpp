@@ -47,53 +47,50 @@ int main() {
 		std::cout << " нет чисел, которое бы начиналось с цифры 3" << std::endl;
 	}
 	std::cout << std::endl;
+//пункт 2
+int maxim_sum;
+int row;
+bool f_sum = 1;
 
+const int r = 3;
+const int c = 4;
+int matrix[r][c];
 
-		//пункт 2
-		int maxim_sum;
-		int row;
-		bool f_sum = 1;
-
-		const int r = 3;
-		const int c = 4;
-		int matrix[r][c];
-
-		for (int i = 0; i < r; ++i) { 
-		std::cout << "Введите " << c << " элементов для " << i + 1 << " строки" << std::endl;
-			for (int j = 0; j < c; ++j) { 
-			std::cin >> matrix[i][j];
-			}
-		}
-		for (int i = 0; i < r; ++i) {
-			int sum = 0;
-			for (int j = 0; j < c; ++j) {
-			 sum += matrix[i][j];
-			}
-			if (f_sum) {
-				maxim_sum = sum;
-				row = i;
-				f_sum = 0;
-			}
-			if (abs(sum) > abs(maxim_sum)) { 
-				maxim_sum = sum;
-				row = i;
-			}
-			for (int i = 0; i < c; ++i) {
-				matrix[row][i] = 999; 
-			}
-			for (i = 0; i < r; ++i) {
-				std::cout << std::endl;
-				for (int j = 0; j < c; ++j) {
-
-		std::cout << matrix[i][j] << " ";  
-				}
-			}
-		}
-		return 0;
+for (int i = 0; i < r; ++i) { 
+std::cout << "Введите " << c << " элементов для " << i + 1 << " строки" << std::endl;
+	for (int j = 0; j < c; ++j) { 
+	std::cin >> matrix[i][j];
+	}
+}
+for (int i = 0; i < r; ++i) {
+	int sum = 0;
+	for (int j = 0; j < c; ++j) {
+		sum += matrix[i][j];
 	}
 
+	if (f_sum) {
+		maxim_sum = sum;
+		row = i;
+		f_sum = 0;
+	}
+
+	if (abs(sum) > abs(maxim_sum)) {
+		maxim_sum = sum;
+		row = i;
+	}
+}
+for (int i = 0; i < c; ++i) {
+	matrix[row][i] = 999; 
+}
+
+for ( int i = 0; i < r; ++i) {
+	std::cout << std::endl;
+	for (int j = 0; j < c; ++j) {
+
+			std::cout << matrix[i][j] << " ";
+		}
+	}
+}
 
 
-
-
-
+		
