@@ -5,24 +5,22 @@ int main() {
 
 	// пункт 1
 	setlocale(LC_ALL, "Russian");
-
-	const int l = 9; // размер массива
-	int arr[l]; //массив
+	const int l = 9; 
+	int arr[l]; 
 
 	std::cout << "Введите " << l << " чисeл: ";
 	for (int i = 0; i < l; ++i) {
 		std::cin >> arr[i];
-
 	}
 	bool a = 0;
 	for (int i = 0; i < l; ++i) {
-		int num = abs(arr[i]); // массив не может быть отриц. ставим модуль
+		int num = abs(arr[i]); 
 		int d = 0;
 		while (num != 0) {
 			d = num % 10;
 			num /= 10;
 		}
-		if (d == 3) { // смотрим, есть ли числа с 3
+		if (d == 3) { 
 		a = 1;
 		break;
 		}
@@ -36,7 +34,7 @@ int main() {
 				int left = arr[i];
 				int r = arr[j];
 				if (r < left) {
-				arr[i] = r; // массив идет по возрастанию
+				arr[i] = r; 
 				arr[j] = left;
 				}
 			}
@@ -51,7 +49,6 @@ int main() {
 	std::cout << std::endl;
 
 
-
 		//пункт 2
 		int maxim_sum;
 		int row;
@@ -61,9 +58,9 @@ int main() {
 		const int c = 4;
 		int matrix[r][c];
 
-		for (int i = 0; i < r; ++i) { //строки
+		for (int i = 0; i < r; ++i) { 
 		std::cout << "Введите " << c << " элементов для " << i + 1 << " строки" << std::endl;
-			for (int j = 0; j < c; ++j) { //столбцы
+			for (int j = 0; j < c; ++j) { 
 			std::cin >> matrix[i][j];
 			}
 		}
@@ -82,7 +79,7 @@ int main() {
 				row = i;
 			}
 			for (int i = 0; i < c; ++i) {
-				matrix[row][i] = 999; //замена значений
+				matrix[row][i] = 999; 
 			}
 			for (i = 0; i < r; ++i) {
 				std::cout << std::endl;
@@ -94,6 +91,7 @@ int main() {
 		}
 		return 0;
 	}
+
 
 
 
