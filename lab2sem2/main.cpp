@@ -14,28 +14,29 @@ int main() {
     Book book1a("A", works1, 25, 100.0f);
     Book book2a("A", works2, 50, 100.0f);
 
-    std::cout << "Êíèãà 1:" << std::endl;
+    std::cout << "ÐšÐ½Ð¸Ð³Ð° 1:" << std::endl;
     book1a.show();
 
-    std::cout << "Êíèãà 2:" << std::endl;
+    std::cout << "ÐšÐ½Ð¸Ð³Ð° 2:" << std::endl;
     book2a.show();
 
-    std::cout << "Ðåçóëüòàò êíèãà 1 + êíèãà 2:" << std::endl;
+    std::cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÐºÐ½Ð¸Ð³Ð° 1 + ÐºÐ½Ð¸Ð³Ð° 2:" << std::endl;
     Book book21 = book1a + book2a;
     book21.show();
 
-    std::cout << "Ðåçóëüòàò êíèãà 1 / êíèãà 2:" << std::endl;
+    std::cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÐºÐ½Ð¸Ð³Ð° 1 / ÐºÐ½Ð¸Ð³Ð° 2:" << std::endl;
     Book book12 = book1a / book2a;
     book12.show();
 
     Book book3("B", works2, 50, 100.0f);
-    std::cout << "\nÊíèãà 3:" << std::endl;
+    std::cout << "\nÐšÐ½Ð¸Ð³Ð° 3:" << std::endl;
     book3.show();
 
-    std::cout << "Ðåçóëüòàò êíèãà 1 + êíèãà 3:" << std::endl;
+    std::cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÐºÐ½Ð¸Ð³Ð° 1 + ÐºÐ½Ð¸Ð³Ð° 3:" << std::endl;
     Book book13 = book1a + book3;
     book13.show();
 
     
     return 0;
+
 }
