@@ -17,8 +17,10 @@ public:
 
     Book operator+(Book other);
     Book operator/(Book other);
+    Book operator+=(Book other);
 
     void show();
 };
+
 
 #endif
