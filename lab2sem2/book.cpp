@@ -24,9 +24,12 @@ Book Book::operator+(Book other) {
 	if (author == other.author) {
 		result.author = author;
 	}
+		
 	else {
 		result.author = author + " и " + other.author;
 	}
+
+	
 	result.pages = pages + other.pages;
 	result.price = (price + other.price) * 0.85f;
 	result.works = works;
@@ -48,6 +51,30 @@ Book Book::operator+(Book other) {
 
 }
 
+
+
+Book Book::operator+=(Book other) {
+
+	pages = pages + other.pages;
+
+	price = (price + other.price) * 0.85f;
+
+	std::vector<std::string> newwork;
+
+	for (int i = 0; i < works.size(); i++) {
+		newwork.push_back(author + works[i]);
+	}
+	for (int i = 0; i < other.works.size(); i++) {
+		newwork.push_back(other.author + other.works[i]);
+	}
+
+	works = newwork;
+
+	return *this;
+}
+
+
+
 Book Book::operator/(Book other) {
 	Book result;
 	if (author == other.author) {
@@ -58,6 +85,8 @@ Book Book::operator/(Book other) {
 		result.author = author + "и" + other.author;
 	}
 
+
+	
 	result.pages = (pages + other.pages) * 0.7f;
 	result.price = (price + other.price) * 1.1f;
 	srand(time(0));
