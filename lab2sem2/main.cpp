@@ -24,6 +24,10 @@ int main() {
     Book book21 = book1a + book2a;
     book21.show();
 
+    std::cout << "Результат книга 1 += книга 2:" << std::endl;
+    book1a += book2a;
+    book1a.show();
+
     std::cout << "Результат книга 1 / книга 2:" << std::endl;
     Book book12 = book1a / book2a;
     book12.show();
@@ -40,3 +44,4 @@ int main() {
     return 0;
 
 }
+
