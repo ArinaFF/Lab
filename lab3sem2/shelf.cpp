@@ -16,18 +16,18 @@ Shelf::Shelf(const Shelf& other) {
 }
 
 Shelf::~Shelf() {
-    std::cout << "Ïîëêà óäàëåíà" << std::endl;
+    std::cout << "ÐŸÐ¾Ð»ÐºÐ° ÑƒÐ´Ð°Ð»ÐµÐ½Ð°" << std::endl;
     books.clear();
 }
 
 void Shelf::addBook(Book* book) {
     if (books.size() < maxCapacity) {
         books.push_back(book);
-        std::cout << "Êíèãà \"" << book->getTitle() << "\" ïîñòàâëåíà íà ïîëêó." << std::endl;
+        std::cout << "ÐšÐ½Ð¸Ð³Ð° \"" << book->getTitle() << "\" Ð¿Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð° Ð½Ð° Ð¿Ð¾Ð»ÐºÑƒ." << std::endl;
     }
 
     else {
-        std::cout << "Ïîëêà çàïîëíåíà!" << std::endl;
+        std::cout << "ÐŸÐ¾Ð»ÐºÐ° Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð°!" << std::endl;
     }
 }
 
@@ -42,16 +42,17 @@ void Shelf::sortByTitle() {
             }
         }
     }
-    std::cout << "Êíèãè îòñîðòèðîâàíû ïî íàçâàíèþ." << std::endl;
+    std::cout << "ÐšÐ½Ð¸Ð³Ð¸ Ð¾Ñ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ñ‹ Ð¿Ð¾ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸ÑŽ." << std::endl;
 }
 
 
 void Shelf::show() {
-    std::cout << "=== Ïîëêà (âìåñòèìîñòü: " << maxCapacity << ") ===" << std::endl;
-    std::cout << "Êíèã íà ïîëêå: " << books.size() << std::endl;
+    std::cout << "=== ÐŸÐ¾Ð»ÐºÐ° (Ð²Ð¼ÐµÑÑ‚Ð¸Ð¼Ð¾ÑÑ‚ÑŒ): " << maxCapacity << ") ===" << std::endl;
+    std::cout << "ÐšÐ½Ð¸Ð³ Ð½Ð° Ð¿Ð¾Ð»ÐºÐµ: " << books.size() << std::endl;
     for (int i = 0; i < books.size(); i++) {
         std::cout << i + 1 << ") ";
         books[i]->show();
     }
     std::cout << "......................................" << std::endl;
+
 }
