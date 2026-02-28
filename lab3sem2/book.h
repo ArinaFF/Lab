@@ -23,8 +23,8 @@ public:
 
 
         Bookmark() {
-            color = "Красный";
-            material = "Бумага";
+            color = "РљСЂР°СЃРЅС‹Р№";
+            material = "Р‘СѓРјР°РіР°";
             pageNum = 1;
         }
 
@@ -45,7 +45,7 @@ public:
         }
 
         void show() {
-            std::cout << "Флажок: цвет = " << color << ", материал = " << material << ", стр. " << pageNum << std::endl;
+            std::cout << "Р¤Р»Р°Р¶РѕРє: С†РІРµС‚ = " << color << ", РјР°С‚РµСЂРёР°Р» = " << material << ", СЃС‚СЂ. " << pageNum << std::endl;
         }
     };
 
@@ -90,5 +90,6 @@ public:
     Book operator+=(Book other);
     Book operator/(Book other);
 };
+
 
 #endif
