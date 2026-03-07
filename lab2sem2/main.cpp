@@ -1,15 +1,15 @@
 #include "lab2.hpp"
 #include <iostream>
 #include <vector>
-
-
+#include <cstdlib>
+#include <ctime>
 
 int main() {
     setlocale(LC_ALL, "Russian");
+    srand(static_cast<unsigned>(time(nullptr))); 
+
     std::vector<std::string> works1 = { "a", "b", "v" };
     std::vector<std::string> works2 = { "a", "m", "n" };
-
-
 
     Book book1a("A", works1, 25, 100.0f);
     Book book2a("A", works2, 50, 100.0f);
@@ -33,15 +33,12 @@ int main() {
     book12.show();
 
     Book book3("B", works2, 50, 100.0f);
-    std::cout << "\nКнига 3:" << std::endl;
+    std::cout << "Книга 3:" << std::endl;
     book3.show();
 
     std::cout << "Результат книга 1 + книга 3:" << std::endl;
     Book book13 = book1a + book3;
     book13.show();
 
-    
     return 0;
-
 }
-
