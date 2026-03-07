@@ -1,9 +1,8 @@
-#ifndef LAB_2_H
-#define LAB_2_H
+#ifndef LAB_2_HPP
+#define LAB_2_HPP
 
 #include <string>
 #include <vector>
-
 
 class Book {
 public:
@@ -13,14 +12,13 @@ public:
     float price;
 
     Book();
-    Book(std::string a, std::vector<std::string> w, int p, float pr);
+    Book(const std::string& a, const std::vector<std::string>& w, int p, float pr);
 
-    Book operator+(Book other);
-    Book operator/(Book other);
-    Book operator+=(Book other);
+    Book operator+(const Book& other) const;
+    Book operator/(const Book& other) const;
+    Book& operator+=(const Book& other);  
 
-    void show();
+    void show() const;
 };
-
 
 #endif
